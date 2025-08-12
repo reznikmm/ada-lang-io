@@ -9,29 +9,51 @@ draft: false
 
 ## Foreword
 
-Embedded systems are software systems that run on devices with limited resources.
-These systems often have specific requirements for reliability, real-time
-operation, limited power consumption, and so on.
+**Embedded systems** are specialized computing units built into larger devices
+to control their operations. They typically consist of a **CPU**, **memory**,
+**input/output (I/O) interfaces**, and **peripheral devices**.
+These systems appear in countless applications - from **smartwatches** and
+**home appliances** to **automotive systems** and **spacecraft** - and range
+widely in size and complexity.
 
-The Ada language is an excellent choice for implementing such systems due to
-its capabilities. As a compiled language, Ada programs are very energy-efficient.
-The language's original focus on reliability and safety aligns well with the goals
-of embedded systems development.
-Flexible representation specification capabilities allow for easy low-level
-hardware interaction.
-At the same time, the powerful type system enables natural expression of
-application domain concepts.
-Finally, the language standard includes a dedicated section for supporting
-embedded and real-time systems.
-By implementing the standard's requirements, Ada makes it possible to program
-devices without the need for general-purpose operating systems, while offering
-effective support for a multitasking environment on devices with quite limited
-capabilities.
+Because each embedded system is tailored for a specific function, its hardware
+is optimized for factors such as **cost**, **size**, **weight**, and
+**power efficiency**.
+This optimization often introduces resource constraints like limited processing
+speed, memory capacity, and I/O bandwidth, creating unique challenges for
+software development.
 
-The purpose of this article is to help beginners understand the available tools
-for programming embedded systems in Ada, using a simple program as an example.
-We will cover the installation and configuration of the software, using the
-`STM32F407` development board as a case study.
+## Why Ada Fits Embedded Development
+
+The **Ada programming language** was designed with safety-critical and
+resource-constrained systems in mind, making it an excellent choice for embedded
+projects. Its key advantages include:
+
+- **Efficiency**: Generates fast, compact code, reducing energy consumption.
+- **Reliability & Safety**: Strong type checking and compile-time validation help
+  prevent common programming errors.
+- **Expressiveness**: The type system allows clear, natural mapping of software to
+  real-world domain concepts.
+- **Built-in Concurrency**: Supports advanced multithreading directly at the language
+  level-no operating system required-even on low-power microcontrollers.
+
+Ada’s combination of performance, clarity, and safety aligns perfectly with the
+demands of embedded development.
+
+## Purpose of This Guide
+
+This article will walk beginners through the end-to-end process of creating
+an embedded systems project in Ada. We’ll cover:
+
+1. **Installing the necessary development tools**
+2. **Configuring the project environment**
+3. **Writing and compiling Ada code**
+4. **Deploying and testing on target hardware**
+
+Our example will use the `STM32F407` microcontroller due to its
+**low cost**, **wide availability**, and **developer-friendly ecosystem**.
+While the same process applies to many other MCUs, specific steps and
+configurations will vary considerably.
 
 ## Required Tools and Components
 
